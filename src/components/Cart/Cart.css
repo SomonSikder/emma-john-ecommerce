@@ -1,0 +1,12 @@
+h3 {
+  color: blue;
+}
+.btn {
+  display: block;
+  background-color: goldenrod;
+  border-radius: 5px;
+  width: 18rem;
+  padding: 0.5rem;
+  margin: 5px 0;
+  border: none;
+}
