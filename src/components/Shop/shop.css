@@ -1,13 +1,13 @@
-.search-field {
+.search-container {
   width: 100%;
   background: #000;
 }
-.search-field input {
+.search-container input {
   width: 40%;
   margin: 1.5rem 7rem 1rem;
   padding: 2px 5px;
 }
-.search-field input:focus {
+.search-container input:focus {
   outline: 1px solid goldenrod;
 }
 .shop-container {
