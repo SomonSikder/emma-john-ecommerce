@@ -5,29 +5,29 @@ import Rating from 'react-rating';
 import './Product.css';
 
 const Product = (props) => {
-    const {name, img, price, stock, seller,star} = props.product
-    const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />
+    // console.log(props);
+    const { name, img, seller, price, stock, star } = props.product;
 
     return (
-        <div className='product'>
-            <img className='img' src={img} alt="" />
+        <div className="product">
             <div>
-                <h5 className='product-name'>{name}</h5>
-                <p><small>Order by: {seller}</small></p>
-                <p>Price: ${price}</p>
-                <p><small>only {stock} left in stock - order soon</small> </p>
-                <Rating 
+                <img src={img} alt="" />
+            </div>
+            <div>
+                <h4 className="product-name">{name}</h4>
+                <p><small>by: {seller}</small></p>
+                <p>Price: {price}</p>
+                <p><small>only {stock} left in stock - order soon</small></p>
+                <Rating
+                    initialRating={star}
                     emptySymbol="far fa-star icon-color"
                     fullSymbol="fas fa-star icon-color"
-                    initialRating={star}
-                    readonly
-                ></Rating>
+                    readonly></Rating>
                 <br />
-                <br />
-                <button 
-                    onClick={()=>props.handleAddToCart(props.product)} 
+                <button
+                    onClick={() => props.handleAddToCart(props.product)}
                     className="btn-regular"
-                >{cartIcon}  add to cart</button>
+                ><FontAwesomeIcon icon={faShoppingCart} /> add to cart</button>
             </div>
         </div>
     );

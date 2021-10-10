@@ -25,11 +25,16 @@ const Cart = (props) => {
         <div className='cart'>
             <h3>Order Summary</h3>
             <hr/>
-            <span className='btn'>Items Ordered: {totalQuantity}</span>
-            <span className='btn'>Total: $ {total.toFixed(2)}</span>
-            <span className='btn'>Shipping: $ {shipping}</span>
-            <span className='btn'>Tax: $ {tax.toFixed(2)}</span>
-            <span className='btn'>Grand total: $ {grandTotal.toFixed(2)}</span>
+            <div>
+                <span className='btn'>Items Ordered: {totalQuantity}</span>
+                <span className='btn'>Total: $ {total.toFixed(2)}</span>
+                <span className='btn'>Shipping: $ {shipping}</span>
+                <span className='btn'>Tax: $ {tax.toFixed(2)}</span>
+                <span className='btn'>Grand total: $ {grandTotal.toFixed(2)}</span>
+            </div>
+            <div className='order'>
+                <button className='order-btn'>Order Reviwe</button>
+            </div>
         </div>
     );
 };

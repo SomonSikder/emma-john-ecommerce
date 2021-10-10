@@ -1,7 +1,8 @@
 h3 {
   color: blue;
 }
-.btn {
+.btn,
+.order-btn {
   display: block;
   background-color: goldenrod;
   border-radius: 5px;
@@ -9,4 +10,19 @@ h3 {
   padding: 0.5rem;
   margin: 5px 0;
   border: none;
+}
+.order {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.order-btn {
+  background-color: rgb(224, 190, 105);
+  width: 10rem;
+}
+.order-btn:hover {
+  background-color: goldenrod;
+  width: 12rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
