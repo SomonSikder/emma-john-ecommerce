@@ -3,7 +3,7 @@ import './Cart.css';
 
 const Cart = (props) => {
     const {cart} = props
-
+    
     // const totalReducer = (previous, product) => previous + product.price
     // let total = cart.reduce(totalReducer, 0)
     
@@ -33,7 +33,7 @@ const Cart = (props) => {
                 <span className='btn'>Grand total: $ {grandTotal.toFixed(2)}</span>
             </div>
             <div className='order'>
-                <button className='order-btn'>Order Reviwe</button>
+                {props.children}
             </div>
         </div>
     );

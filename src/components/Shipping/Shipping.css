@@ -1,0 +1,47 @@
+.shipping-page {
+  width: 100%;
+  /* background: #000; */
+}
+.shipping {
+  width: 30%;
+  margin: 4rem auto;
+  box-shadow: 0px 0px 25px black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.shipping-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.shipping-title {
+  text-align: center;
+}
+.shipping-form input {
+  display: block;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 300px;
+}
+.shipping-form input {
+  display: block;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 300px;
+}
+.shipping-form input[type="submit"] {
+  background: goldenrod;
+  text-decoration: none;
+  cursor: pointer;
+}
+.shipping-form input[type="submit"]:hover {
+  background: rgb(172, 123, 2);
+}
+.error {
+  color: red;
+}

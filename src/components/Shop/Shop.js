@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import useCart from '../../Hooks/useCart.js';
 import { addToDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
@@ -12,7 +13,7 @@ const Shop = () => {
     const [displayProducts, setDisplayProducts] = useState([]);
 
     useEffect(() => {
-        fetch('./products.JSON')
+        fetch('./products.json')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -58,7 +59,11 @@ const Shop = () => {
                     }
                 </div>
                 <div className="cart-container">
-                    <Cart cart={cart}></Cart>
+                    <Cart cart={cart}>
+                        <NavLink to='/orders'>
+                            <button className="order-btn">Review Order</button>
+                        </NavLink>
+                    </Cart>
                 </div>
             </div>
         </>

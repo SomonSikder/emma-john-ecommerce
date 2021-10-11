@@ -5,6 +5,7 @@
   height: 50px;
 }
 .nav-bar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,4 +29,29 @@
 }
 .header nav a:hover {
   background-color: lightgray;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.user-stutas {
+  margin-right: 2rem;
+}
+small {
+  margin-right: 1rem;
+  color: goldenrod;
+}
+.btn-log {
+  background: goldenrod;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+}
+.btn-loguot:hover {
+  background: rgb(156, 113, 2);
 }

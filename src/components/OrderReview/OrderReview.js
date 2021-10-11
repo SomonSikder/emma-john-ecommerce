@@ -1,16 +1,23 @@
 import React from 'react';
-import useCart from '../../Hooks/useCart';
+import { useHistory } from 'react-router-dom';
+import { default as useCart } from '../../Hooks/useCart';
 import useProducts from '../../Hooks/useProducts';
 import { deleteFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
+
+
 const OrderReview = () => {
     const [products] = useProducts()
     const [cart]  = useCart(products)
-
+    const history = useHistory()
     const handleRemove = (id)=>{
         console.log('clicked', id)
         deleteFromDb(id)
+    }
+    const handleProceedToShipping=()=>{
+        history.push('./shipping')
+        // clearTheCart()
     }
     return (
         <div className='shop-container'>
@@ -24,7 +31,11 @@ const OrderReview = () => {
                 } 
             </div>
             <div className='cart-container'>
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    
+                    <button onClick={handleProceedToShipping} className="order-btn">Proceed to shipping</button>
+                    
+                </Cart>
             </div>
         </div>
     );
