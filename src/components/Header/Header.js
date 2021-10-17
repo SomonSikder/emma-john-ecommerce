@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-import logo from '../../images/logo.png';
 import './header.css';
+
 const Header = () => {
     const {user, logOut} = useAuth();
     return (
         <div className='header'>
-            <img className='logo' src={logo} alt="Logo" />
+            <h2>Turst</h2>
             <div className="nav-bar">
                 <nav>
                     <div className='nav-link'>
